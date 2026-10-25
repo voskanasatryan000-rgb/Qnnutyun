@@ -55,7 +55,7 @@ namespace MovieDemo
 
             Movie[] movies = new Movie[count];
 
-            Console.WriteLine("DZEVACHAP hamar, anun, taretiv, janr (1-5), ditum, like");
+            Console.WriteLine("hamar, anun, taretiv, janr (1-5), ditum, like");
 
             for (int i = 0; i < count; i++)
             {
