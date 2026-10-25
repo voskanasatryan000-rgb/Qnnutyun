@@ -15,7 +15,7 @@ static void C(ref int x)
     Console.WriteLine(x);
 }
 
-static int Gumar(params int[] x)
+static int SumValues(params int[] x)
 {
     int sum = 0;
     for(int i=0; i<x.Length;i++)
@@ -33,7 +33,7 @@ static void Main()
     int c = 10;
     C(ref c);
 
-    int y = Gumar(5, 7, 3, 4, 5);
+    int y = SumValues(5, 7, 3, 4, 5);
     Console.WriteLine(y);
   }
 }
