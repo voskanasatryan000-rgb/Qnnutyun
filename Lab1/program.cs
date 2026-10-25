@@ -1,56 +1,56 @@
 using System;
 
-namespace Matric
+namespace MatrixDemo
 {
-    class RandomMatric
+    class RandomMatrix
     {
         private int N { get; set; }
         private int A { get; set; }
         private int B { get; set; }
 
-        private int[,] matric;
-        private Random r = new Random();
+        private int[,] matrix;
+        private Random random = new Random();
 
-        public RandomMatric(int n, int a, int b)
+        public RandomMatrix(int n, int a, int b)
         {
             N = n;
             A = a;
             B = b;
-            matric = new int[N, N];
-            Arjeq();
+            matrix = new int[N, N];
+            FillMatrix();
         }
 
-        private void Arjeq()
+        private void FillMatrix()
         {
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    matric[i, j] = r.Next(A, B + 1);
+                    matrix[i, j] = random.Next(A, B + 1);
                 }
             }
         }
 
-        public void Tvyal()
+        public void ShowMatrix()
         {
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    Console.Write($"{matric[i, j],5}");
+                    Console.Write($"{matrix[i, j],5}");
                 }
                 Console.WriteLine();
             }
         }
 
-        public int Kent()
+        public int CountOdd()
         {
             int c = 0;
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    if (matric[i, j] % 2 != 0)
+                    if (matrix[i, j] % 2 != 0)
                         c++;
                 }
             }
@@ -62,12 +62,12 @@ namespace Matric
     {
         static void Main(string[] args)
         {
-            RandomMatric m = new RandomMatric(5, -10, 20);
+            RandomMatrix m = new RandomMatrix(5, -10, 20);
 
             Console.WriteLine("Matric");
-            m.Tvyal();
+            m.ShowMatrix();
 
-            Console.WriteLine($"Kenteri qanak {m.Kent()}");
+            Console.WriteLine($"Kenteri qanak {m.CountOdd()}");
         }
     }
 }
