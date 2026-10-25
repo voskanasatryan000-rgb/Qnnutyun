@@ -43,7 +43,7 @@ namespace MatrixDemo
             }
         }
 
-        public int CountOdd()
+        public int Kent()
         {
             int c = 0;
             for (int i = 0; i < N; i++)
@@ -67,7 +67,7 @@ namespace MatrixDemo
             Console.WriteLine("Matric");
             m.ShowMatrix();
 
-            Console.WriteLine($"Kenteri qanak {m.CountOdd()}");
+            Console.WriteLine($"Kenteri qanak {m.Kent()}");
         }
     }
 }
